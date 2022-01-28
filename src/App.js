@@ -1,6 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-//import { Dashboard, Register, Error, Landing } from "./pages";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Error from "./pages/Error";
 import Landing from "./pages/Landing";
