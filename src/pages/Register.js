@@ -1,18 +1,18 @@
 import { useState, useEffect } from "react";
 import FormRow from "../components/FormRow";
 import Alert from "../components/Alert";
+import { useAppContext } from "../Context/appContext";
 
 const initialState = {
   name: "",
   email: "",
   password: "",
   isMember: true,
-  showAlert: false,
 };
 
 const Register = () => {
   const [values, setValues] = useState(initialState);
-
+  const { isLoading, showAlert } = useAppContext();
   const toggleMember = () => {
     setValues({ ...values, isMember: !values.isMember });
   };
@@ -28,7 +28,7 @@ const Register = () => {
     <div>
       <form onSubmit={onSubmit}>
         <h3>{values.isMember ? "Login" : "Register"}</h3>
-        {values.showAlert && <Alert />}
+        {showAlert && <Alert />}
         {!values.isMember && (
           <FormRow
             type="text"
