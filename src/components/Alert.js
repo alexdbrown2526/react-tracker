@@ -2,7 +2,7 @@ import { appContext } from "../Context/appContext";
 
 const Alert = () => {
   const { alertType, alertText } = useAppContext();
-  return <div className={`alert alert-${alertType}`}>{alertText}</div>;
+  return <div>{alertText}</div>;
 };
 
 export default Alert;
