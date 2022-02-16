@@ -1,5 +1,4 @@
 import React, { useReducer, useContext } from "react";
-import reducer from "./reducer";
 import { DISPLAY_ALERT } from "./actions";
 
 const reducer = (state, action) => {
